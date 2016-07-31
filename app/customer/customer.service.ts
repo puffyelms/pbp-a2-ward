@@ -9,6 +9,7 @@ export class CustomerService {
 
     constructor(private _http: Http) { }
 
+    // This is Ward's preference, on Wednesday.  Wants promises when leaving service
     getCustomers() {
         return this._http.get(URL_CUSTOMER)
             .map((response: Response) => response.json())
